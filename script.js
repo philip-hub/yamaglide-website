@@ -80,3 +80,20 @@ function show() {
 } 
 
 setTimeout(fadeIn, 12000);
+
+
+
+
+document.addEventListener("visibilitychange", () => {
+   if (document.hidden) {
+     for (var i = 1; i <10; i++)
+        window.clearInterval(i);
+      clear()
+   } else {
+     clear()
+     document.getElementById("type").innerHTML = "Experience the Future";
+     show()
+      // tab is active
+   }
+});
+
